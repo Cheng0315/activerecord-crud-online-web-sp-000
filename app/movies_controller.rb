@@ -43,7 +43,7 @@ end
 def can_get_the_first_item_in_the_database
   sql = <<-SQL
     SELECT *
-    FROM #{table_name}
+    FROM movies
     WHERE id = 1
   SQL
 
