@@ -41,8 +41,9 @@ def can_be_created_in_a_block(args = {})
 end
 
 def can_get_the_first_item_in_the_database
-  DB[:conn].results_as_hash = true
+  
   sql = <<-SQL
+  DB[:conn].results_as_hash = true
     SELECT *
     FROM movies
     WHERE id = 1
