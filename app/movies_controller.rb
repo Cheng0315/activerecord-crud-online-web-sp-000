@@ -32,7 +32,7 @@ def can_be_created_in_a_block(args = {})
 
   Movie.create do |m|
     if !args.empty?
-      args.each {|k, v| m[k.to_s] = v}
+      args.each {|k, v| m[k] = v}
     else
       m.title = "Home Alone"
       m.release_date = 1990
