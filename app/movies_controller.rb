@@ -47,7 +47,7 @@ def can_get_the_first_item_in_the_database
     WHERE id = 1
   SQL
 
-  ActiveRecord::Base.connect.execute(sql)
+  ActiveRecord::Base.connection.execute(sql)
 end
 
 def can_get_the_last_item_in_the_database
