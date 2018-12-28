@@ -31,7 +31,7 @@ def can_be_created_in_a_block(args = {})
   # release_date == 1990
 
   Movie.create do |m|
-    args.each {|k.to_s, v| m[k] = v}
+    args.each {|k, v| m[k] = v}
   end
 end
 
