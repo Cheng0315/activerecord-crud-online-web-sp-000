@@ -92,7 +92,7 @@ def can_update_multiple_items_at_once
   end
 
   Movie.count.times do |i|
-    Movie.where(id = i).update(title: "A Movie")
+    Movie.where("id == #{i}").update(title: "A Movie")
   end
 end
 
