@@ -91,7 +91,7 @@ def can_update_multiple_items_at_once
     Movie.create(title: "Movie_#{i}", release_date: 2000+i)
   end
 
-  Movie.count.times do |i|
+  Movie.count.times do |i + 1|
     Movie.where("id == #{i}").update(title: "A Movie")
   end
 end
