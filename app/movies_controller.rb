@@ -107,6 +107,6 @@ def can_destroy_all_items_at_once
   end
 
   Movie.count.times do |i|
-    Movie.where("id == #{i + 1}").destroy
+    Movie.find_by(id = "#{i + 1}").destroy
   end
 end
